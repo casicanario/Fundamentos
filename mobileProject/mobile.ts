@@ -6,6 +6,7 @@
 // color: string
 // price: number
 //constructor con los mismos parametros de entrada que atributos.
+
 class Mobile {
     name: string;
     trademark: string;
@@ -51,9 +52,21 @@ class Mobile {
     public setPrice(price: number): void {
         this.price = price;
     }
-    //exportar la clase Mobile
-}
-export { Mobile };
+   
+} 
 
+
+// Método que imprime todas las características del móvil
+public printAllCharacteristics(): void {
+    console.log(`The characteristics of the mobile ${this.name} are:`);
+    console.log(`Name: ${this.name}`);
+    console.log(`Trademark: ${this.trademark}`);
+    console.log(`Model: ${this.model}`);
+    console.log(`Color: ${this.color}`);
+    console.log(`Price: ${this.price}€`);
+}
+
+//exportar la clase Mobile
+export { Mobile };
 
 
