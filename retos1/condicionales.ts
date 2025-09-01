@@ -88,15 +88,20 @@ function continent(country: string): void {
     }
 }
 
-function isEven(number: number): void {
-    if (number % 2 === 0) {
-        console.log("El número es par");
-    } else {
-        console.log("El número es impar");
-    }
+// Esta devuelve boolean para que se pueda usar en if, condiciones, etc.
+function isEven(number: number): boolean {
+  return number % 2 === 0;
 }
-//exportar la funcion isEven 
-export { isEven };
+// Esta función imprime directamente el resultado.
+function isEvenPrint(number: number): void {
+  if (isEven(number)) {
+    console.log("El número es par");
+  } else {
+    console.log("El número es impar");
+  }
+}
+
+export { isEven, isEvenPrint };
 
 
 

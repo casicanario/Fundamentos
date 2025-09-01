@@ -4,7 +4,7 @@
 //["Barco", "Baca", "Bicicleta", "Balon", "Bisiesto", "Brasil"] 
 //["Venezuela", "Veneno", "Voltaje"]
 
-import { isEven } from "./condicionales";
+import { isEven, isEvenPrint} from "./condicionales";
 import { add } from "./buclesFor";
 
 let array1: string[] = ["Casa", "COche", "Ciudad", "Cesta"];
