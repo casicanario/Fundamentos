@@ -95,5 +95,9 @@ function isEven(number: number): void {
         console.log("El número es impar");
     }
 }
+//exportar la funcion isEven 
+export { isEven };
+
+
 
 //subir los cambios a Github

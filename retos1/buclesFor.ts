@@ -48,4 +48,9 @@ function add(myWords: string[]): number {
     return total;
 }
 
+//exportar la funcion add
+export { add };
+
+
+
 
