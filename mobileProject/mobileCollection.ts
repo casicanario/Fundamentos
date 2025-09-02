@@ -16,7 +16,7 @@ export class MobileCollection {
     // Constructor
     constructor(mobiles: Mobile[]) {
         this.mobiles = mobiles;
-        this.totalPrice = this.calculateTotalPrice(); // calculamos el precio total al inicio
+        this.totalPrice = this.totalPriceCalculation(); // usamos el método privado
     }
 
     // Getter de mobiles
@@ -27,7 +27,7 @@ export class MobileCollection {
     // Setter de mobiles
     public setMobiles(mobiles: Mobile[]): void {
         this.mobiles = mobiles;
-        this.totalPrice = this.calculateTotalPrice(); // recalculamos al actualizar
+        this.totalPrice = this.totalPriceCalculation(); // recalculamos con el método privado
     }
 
     // Getter de totalPrice
@@ -35,13 +35,13 @@ export class MobileCollection {
         return this.totalPrice;
     }
 
-    // Setter de totalPrice (aunque normalmente no se haría "a mano")
+    // Setter de totalPrice (poco habitual, pero lo piden)
     public setTotalPrice(totalPrice: number): void {
         this.totalPrice = totalPrice;
     }
 
-    // Método privado para calcular el precio total
-    private calculateTotalPrice(): number {
+    // --- Método privado para calcular el precio total ---
+    private totalPriceCalculation(): number {
         let total = 0;
         for (let mobile of this.mobiles) {
             total += mobile.getPrice();
@@ -49,3 +49,4 @@ export class MobileCollection {
         return total;
     }
 }
+
