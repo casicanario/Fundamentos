@@ -1,6 +1,10 @@
 //Importar la clase MobileCollection.
 //Crear 4 objetos de la clase Mobile y un array que los contenga.
 //Crear un objeto myCollection de la clase MobileCOllection, asignarle el array que hemos creado previamente y comprobar todos sus metodos.
+//Crear un metodo privado llamado totalPriceCalculation sin parametros de entrada, que te calcule el precio total de la coleccion.
+//NOTA: Debe realizar la suma de los precios de todos los objetos almacenados en el atributo mobiles.
+//En el constructor llamar totalPriceCalculation y guardarlo en su atributo correspondiente.
+//Probar de nuevo el método getPrice de la clase en el fichero mobileCollectionTest.ts
 
 import { Mobile } from "./mobile";
 import { MobileCollection } from "./mobileCollection";
@@ -33,10 +37,9 @@ console.log(myCollection.getMobiles());
 console.log("=== Nuevo precio total ===");
 console.log(myCollection.getTotalPrice());
 
+// --- Probar el nuevo método printCollection ---
+console.log("=== Probando printCollection ===");
+myCollection.printCollection();
 
 
-//Crear un metodo privado llamado totalPriceCalculation sin parametros de entrada, que te calcule el precio total de la coleccion.
-//NOTA: Debe realizar la suma de los precios de todos los objetos almacenados en el atributo mobiles.
-//En el constructor llamar totalPriceCalculation y guardarlo en su atributo correspondiente.
-//Probar de nuevo el método getPrice de la clase en el fichero mobileCollectionTest.ts
 

@@ -16,7 +16,7 @@ export class MobileCollection {
     // Constructor
     constructor(mobiles: Mobile[]) {
         this.mobiles = mobiles;
-        this.totalPrice = this.totalPriceCalculation(); // usamos el método privado
+        this.totalPrice = this.totalPriceCalculation();
     }
 
     // Getter de mobiles
@@ -27,7 +27,7 @@ export class MobileCollection {
     // Setter de mobiles
     public setMobiles(mobiles: Mobile[]): void {
         this.mobiles = mobiles;
-        this.totalPrice = this.totalPriceCalculation(); // recalculamos con el método privado
+        this.totalPrice = this.totalPriceCalculation();
     }
 
     // Getter de totalPrice
@@ -35,7 +35,7 @@ export class MobileCollection {
         return this.totalPrice;
     }
 
-    // Setter de totalPrice (poco habitual, pero lo piden)
+    // Setter de totalPrice
     public setTotalPrice(totalPrice: number): void {
         this.totalPrice = totalPrice;
     }
@@ -48,5 +48,21 @@ export class MobileCollection {
         }
         return total;
     }
-}
 
+    // --- Método para imprimir la colección ---
+    public printCollection(): void {
+        console.log("This is all my mobiles:");
+
+        for (let mobile of this.mobiles) {
+            console.log(`The characteristics of the mobile ${mobile.getName()} are:`);
+            console.log("Name: " + mobile.getName());
+            console.log("Trademark: " + mobile.getTrademark());
+            console.log("Model: " + mobile.getModel());
+            console.log("Color: " + mobile.getColor());
+            console.log("Price: " + mobile.getPrice());
+            console.log(""); // línea en blanco para separar
+        }
+
+        console.log("Price overall: " + this.totalPrice);
+    }
+}
