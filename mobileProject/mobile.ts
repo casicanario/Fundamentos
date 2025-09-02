@@ -52,19 +52,24 @@ class Mobile {
     public setPrice(price: number): void {
         this.price = price;
     }
-   
+   //Crear un nuevo metodo que imprima por consola todas las caracteristicas de la clase siguiendo el siguiente patron:
+
+//"The characteristics of the mobile name are:"
+//Name: name
+//Trademark: trademark
+//Model: model
+//Color: color
+//Price: price
+    // Método que imprime todas las características del móvil
+    public printAllCharacteristics(): void {
+        console.log(`The characteristics of the mobile ${this.name} are:`);
+        console.log(`Name: ${this.name}`);
+        console.log(`Trademark: ${this.trademark}`);
+        console.log(`Model: ${this.model}`);
+        console.log(`Color: ${this.color}`);
+        console.log(`Price: ${this.price}€`);
+    }
 } 
-
-
-// Método que imprime todas las características del móvil
-public printAllCharacteristics(): void {
-    console.log(`The characteristics of the mobile ${this.name} are:`);
-    console.log(`Name: ${this.name}`);
-    console.log(`Trademark: ${this.trademark}`);
-    console.log(`Model: ${this.model}`);
-    console.log(`Color: ${this.color}`);
-    console.log(`Price: ${this.price}€`);
-}
 
 //exportar la clase Mobile
 export { Mobile };

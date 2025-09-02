@@ -1,5 +1,4 @@
 // Importar la clase Mobile
-import { Mobile } from './mobile';
 
 // Crear un nuevo objeto myMobile de la clase Mobile, y probar todos sus metodos.
 let myMobile = new Mobile("iPhone", "Apple", "12 Pro", "Silver", 999);
@@ -40,10 +39,10 @@ let mobile3 = new Mobile("Pixel 7", "Google", "7 Pro", "White", 899);
 // Crear array con los 3 objetos
 let myMobiles: Mobile[] = [mobile1, mobile2, mobile3];
 
-// Mostrar las características de cada móvil
-for (let mobile of myMobiles) {
-    mobile.printAllCharacteristics();
-}
+// Mostrar las características de cada móvil usando forEach
+myMobiles.forEach(mobile => mobile.printAllCharacteristics());
+
+
 
 
 
